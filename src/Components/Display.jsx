@@ -192,6 +192,7 @@ const Display = (props) => {
                   calculateAge={calculateAge}
                   editUser={props.editUser}
                   addToHistory={props.addToHistory}
+                  deleteUser={props.deleteUser}
                 />
               </ul>
             );

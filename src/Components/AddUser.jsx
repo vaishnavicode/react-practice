@@ -272,10 +272,21 @@ const AddUser = () => {
         value.profileImageUrl =
           profileImageUrl !== "" ? profileImageUrl : value.profileImageUrl;
         value.address = address !== "" ? address : value.address;
+        forceUpdate();
       }
       return index;
     });
-    forceUpdate();
+  };
+
+  const deleteUser = (targetValue) => {
+    users_values.map((val, index) => {
+      if (val.firstName + " " + val.lastName === targetValue) {
+        val.isDeleted = true;
+        forceUpdate();
+      }
+      return index;
+    });
+    setUsers(users_values);
   };
 
   return (
@@ -354,7 +365,12 @@ const AddUser = () => {
           </button>
         </form>
       </div>
-      <Display users={users} editUser={editUser} addToHistory={addToHistory} />
+      <Display
+        users={users}
+        editUser={editUser}
+        addToHistory={addToHistory}
+        deleteUser={deleteUser}
+      />
       <h1 className="heading">History</h1>
       <div className="outer-wrap">
         {history

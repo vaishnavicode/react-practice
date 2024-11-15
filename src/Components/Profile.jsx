@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Editing from "./Editing";
+import DeleteButton from "./DeleteButton";
 
 export default function Profile(props) {
   const [showEdit, setShowEdit] = useState(false);
@@ -36,6 +37,9 @@ export default function Profile(props) {
         >
           Edit
         </button>
+      </li>
+      <li>
+        <DeleteButton deleteUser={props.deleteUser} value={props.value} />
       </li>
       <li>
         <Editing
