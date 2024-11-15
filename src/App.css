@@ -150,4 +150,6 @@ input[type="radio" i] {
     margin-left: 20px;
 }
 
-        
+html{
+    overflow-x: hidden;
+}
