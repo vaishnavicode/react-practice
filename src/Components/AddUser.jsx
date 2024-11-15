@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useReducer } from "react";
 import Display from "./Display";
+import ShowHistory from "./ShowHistory";
 
 var users_values = [
   {
@@ -248,11 +249,7 @@ const AddUser = () => {
       (val) => val.firstName + " " + val.lastName === idGettingEdited
     );
 
-    setHistory((prevState) => {
-      var x = prevState;
-      x.push(JSON.stringify(toBeHistory));
-      return x;
-    });
+    setHistory([...history, JSON.stringify(toBeHistory)]);
     console.log(history);
   };
   const editUser = (
@@ -358,6 +355,22 @@ const AddUser = () => {
         </form>
       </div>
       <Display users={users} editUser={editUser} addToHistory={addToHistory} />
+      <h1 className="heading">History</h1>
+      <div className="outer-wrap">
+        {history
+          .sort((a, b) => {
+            return (a.firstName + " " + a.lastName).localeCompare(
+              b.firstName + " " + b.lastName
+            );
+          })
+          .map((value, index) => {
+            return (
+              <ul key={index} type="none" className="profiles">
+                <ShowHistory value={JSON.parse(value)} />
+              </ul>
+            );
+          })}
+      </div>
     </React.Fragment>
   );
 };
