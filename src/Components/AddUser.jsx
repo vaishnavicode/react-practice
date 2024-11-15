@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useReducer } from "react";
 import Display from "./Display";
 
 var users_values = [
@@ -206,6 +206,11 @@ const AddUser = () => {
   const [address, setAddress] = useState("");
   const [users, setUsers] = useState(users_values);
   const [history, setHistory] = useState([]);
+  const [, forceUpdate] = useReducer((x) => x + 1, 0);
+
+  useEffect(() => {
+    console.log("Use Effect called");
+  }, [users]);
 
   const addUser = () => {
     var values = String(
@@ -233,6 +238,7 @@ const AddUser = () => {
         address: address,
       });
       setUsers(users_values);
+      forceUpdate();
       localStorage.setItem("users", users);
     }
   };
@@ -272,11 +278,8 @@ const AddUser = () => {
       }
       return index;
     });
+    forceUpdate();
   };
-
-  useEffect(() => {
-    console.log("Use Effect called");
-  }, []);
 
   return (
     <React.Fragment>
