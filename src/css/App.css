@@ -1,0 +1,154 @@
+/* #search-input,.profile-cards{
+    border:2px solid #000;
+}
+
+.profile-cards{
+    display:inline-block;
+    padding:5px;
+    margin:10px
+}
+
+.heading,h1{
+    text-align:center;
+    display:flex;
+    justify-content: space-around;
+    margin: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+
+
+}
+
+.filters,.sort,.reverse{
+    display:block;
+    text-align:left;
+    margin:20px
+}
+
+#search-input{
+    padding:5px;
+    height:20px;
+    width:600px
+}
+
+li{
+    text-wrap:wrap
+}
+
+.profiles{
+    display:flex;
+    flex-wrap:wrap;
+    padding:20px;
+    margin:10px auto;
+    height:auto;
+}
+
+.filter-heading,.search{
+    display:flex;
+    margin:20px
+}
+
+h3,img
+
+{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    width:50%
+}
+    
+img{
+    padding:15px
+
+}
+
+.outer-wrap{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-around;
+}
+
+.search{
+    justify-content:center;
+    position:relative
+}
+
+.filter-heading{
+    padding:20px
+}
+
+.reversing, .sorting{
+    display: inline-block;
+    margin: 5px;
+}
+
+button {
+	box-shadow:inset 0px 1px 0px 0px #f29c93;
+	background-color:#fe1a00;
+	border-radius:6px;
+	border:1px solid #d83526;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #b23e35;
+    margin: 10px;
+}
+button:hover {
+	background-color:#ce0100;
+}
+button:active {
+	position:relative;
+	top:1px;
+}
+
+.editing-label, .add-user-label{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    width: 100%;
+}
+
+input[type="date" i] {
+    padding-block: 1px;
+    padding-inline: 2px;
+    width: 170px;
+}
+
+.forms{
+    text-align:left;
+    display:flex;
+    align-items: center;
+    margin: 5px;
+    width: 100%;
+    padding: 20px;
+    width: 100%;
+    justify-content:center;
+    position:relative
+
+}
+
+.add-user-button{
+    justify-content:center;
+    position:relative;
+    margin-right: auto;
+    margin-left: auto;
+    width: 50%;
+
+}
+
+
+input[type="radio" i] {
+    margin-left: 20px;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+} */
